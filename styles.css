@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #282c34;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background: #3c4043;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    margin: 10px 0;
+    width: 250px;
+}
+
+button {
+    background-color: #ff4757;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff6b81;
+}
+
+.message {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.note {
+    font-size: 0.9em;
+    color: #ffcc00;
+}
+
+/* Black screen effect */
+.black-screen {
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2em;
+    animation: fadeInOut 1s;
+}
+
+/* Glitch overlay for random screen flickers */
+.glitch-screen {
+    background: rgba(0, 0, 0, 0.8);
+    color: #ff4757;
+    font-size: 2em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    animation: glitchAnimation 0.2s ease-in-out;
+}
+
+@keyframes glitchAnimation {
+    0% { opacity: 1; transform: translate(0, 0); }
+    25% { opacity: 0.5; transform: translate(-5px, 5px); }
+    50% { opacity: 1; transform: translate(5px, -5px); }
+    75% { opacity: 0.5; transform: translate(-5px, -5px); }
+    100% { opacity: 1; transform: translate(0, 0); }
+}
+
+/* Blur overlay for the entire screen */
+.blur-overlay {
+    filter: blur(5px);
+}
